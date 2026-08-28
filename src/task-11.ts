@@ -7,7 +7,7 @@ type User = {
 type Role = "admin" | "user" | "guest";
 
 function createUserCard({ username, age, city }: User, role: Role): string {
-  return `${username} (${age}) - ${role} from ${city ? city : "Undefined"}`;
+  return `${username} (${age}) - ${role} from ${city ? city : "Unknown"}`;
 }
 
 console.log(createUserCard({ username: "Anna", age: 25, city: "Kyiv" }, "admin"));
