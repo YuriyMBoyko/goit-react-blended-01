@@ -20,5 +20,5 @@ const logThreePosts = async () => {
   });
 }
 
-console.log(getPosts());
+getPosts();
 logThreePosts();
