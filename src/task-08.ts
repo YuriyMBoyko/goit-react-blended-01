@@ -5,6 +5,7 @@ enum Role {
 }
 
 function getPermissions(role: Role): string[] {
+/*
   if (role === Role.Admin) {
     return ["create", "read", "update", "delete"];
   } else if (role === Role.User) {
@@ -13,6 +14,13 @@ function getPermissions(role: Role): string[] {
     return ["read"];
   } else {
     return [];
+  }
+*/
+  switch(role) {
+    case Role.Admin: return ["create", "read", "update", "delete"];
+    case Role.User: return ["read", "update"];
+    case Role.Guest: return ["read"];
+    default: return []; 
   }
 }
 
